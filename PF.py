@@ -95,7 +95,18 @@ def dome(t):
             polygonNF(t, 100, 15)
             t.left(37)
 
-
+def treeangle(t):
+    move(t,0,0)
+    for times in range(150):
+        move(t,0,0)
+        for times in range(25):
+            t.color(times*3, 0, times*4)
+            polygon(t, 100, 3)
+            t.left(times*10)
+            t.forward(20)
+        t.left(90)
+        t.forward(100)
+        
 def together(Hi):
     from random import randint
     import turtle
@@ -143,14 +154,5 @@ def together(Hi):
     confetii(brian, 600, 400)
     confetii(brian, -600, 400)
 
-    move(san,0,0)
-    for times in range(150):
-        move(san,0,0)
-        for times in range(25):
-            san.color(times*3, 0, times*4)
-            polygon(san, 100, 3)
-            san.left(times*10)
-            san.forward(20)
-        san.left(90)
-        san.forward(100)
+    treeangle(san)
     
